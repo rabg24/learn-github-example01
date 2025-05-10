@@ -9,7 +9,7 @@ on:
 jobs:
   job1:
     name: First Job
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Job1 Step One
         uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
         run: date
   job2:
     name: Second Job
-    runs-on: windows_latest
+    runs-on: windows-latest
     steps:
       - name: Job2 Step One
         uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
         run: "Get-ChildItem Env: | Sort-Object Name"
   job3:
     name: Third Job
-    runs-on: macos_latest
+    runs-on: macos-latest
     steps:
       - name: Job2 Step One
         uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
   job4:
     name: depends job
     needs: [job1, job2]
-    runs-on: macos_latest
+    runs-on: macos-latest
     steps:
       - name: Depends Job Step One
         run: date
