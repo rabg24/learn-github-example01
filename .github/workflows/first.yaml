@@ -31,8 +31,7 @@ jobs:
     steps:
       - name: Job2 Step One
         uses: actions/checkout@v2
-      - name: Job2 Step Two
-        run: "Get-ChildItem Env: | Sort-Object Name"
+        run: date
   job4:
     name: depends job
     needs: [job1, job2]
