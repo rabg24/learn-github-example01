@@ -30,7 +30,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Job2 Step One
-        uses: actions/checkout@v2
         run: date
   job4:
     name: depends job
