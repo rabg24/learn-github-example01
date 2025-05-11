@@ -24,7 +24,7 @@ jobs:
       - name: Job2 Step One
         uses: actions/checkout@v2
       - name: Job2 Step Two
-        run: "Get-ChildItem Env: | Sort-Object Name"
+        run: date
   job3:
     name: Third Job
     runs-on: macos-latest
